@@ -1,14 +1,17 @@
 [< Back to menu](../../README.md)
 
-## Game Services Config V2 CLI
+## Game Services Config V2 CLI Program :metal:
 ### Automation Program and Code Generator
 
-Created by [Dan Tovbein](https://github.com/dtovbeinJC) with :heart: and maintained by all CFG2's Developers
+Created by [Dan Tovbein](https://github.com/dtovbeinJC) with :blue_heart: :yellow_heart: :blue_heart:  and maintained by all CFG2's Developers
 
+:exclamation: **before starting, you have to clone the CLI's repository**
+
+`git clone git@github.com:dtovbeinJC/cli.git cli`
 
 You can run the program through this command
 
-    $ source app-cli.sh
+    $ source cli/app-cli.sh
 
 and once it´s initialized for the first time you can run through the next alias
 
@@ -142,3 +145,6 @@ Remove a selected reducer
 
 ### Remove app env vars
 You can remove all environment variables
+
+
+------------------
