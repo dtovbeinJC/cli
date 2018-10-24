@@ -1,0 +1,13 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+
+.componentClass {
+}
+
+:local(.componentClass) {
+  display: initial;
+}
+
+/* Don't forget to remove this class */
+:local(.default-component-content) {
+}   
