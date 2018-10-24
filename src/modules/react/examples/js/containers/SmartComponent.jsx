@@ -1,6 +1,7 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import * as PropTypes from "prop-types";
 import {} from "./helpers";
 import { trimClassNames } from "../../utils/_helpers";
 import { setNameToComponent } from "./actions";
@@ -12,8 +13,8 @@ class SampleComponent extends React.Component {
   static defaultProps = {};
 
   static propTypes = {
-    reducerNameReducer: object,
-    setNameToComponent: any
+    reducerNameReducer: PropTypes.object,
+    setNameToComponent: PropTypes.any
   };
 
   constructor(props) {
