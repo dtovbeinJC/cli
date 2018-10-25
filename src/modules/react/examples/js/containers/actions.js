@@ -1,20 +1,18 @@
-import * as PropTypes from "prop-types";
-import Store from "../../store";
+
 import {
   SAMPLE_ACTION_CONSTANT
 } from "../../constants/index";
 
-export const setNameToComponent = (componentName) => {
-  return (dispatch, getState) => {
+export const setNameToComponent = (componentName) => (dispatch, getState) => {
+  return new Promise((resolve, reject) => {
     const { reducerNameReducer } = getState();
-    Promise.resolve(dispatch({
+    return resolve(dispatch({
       type: SAMPLE_ACTION_CONSTANT,
       payload: {
         name: componentName
       }
-    }))
-    .then((response) => {})
-    .catch((error) => { console.log(error); })
-  };
+    }));
+  })
+    .then((payload) => Promise.resolve({...payload}))
+    .catch((error) => Promise.reject({...error}));
 };
-
