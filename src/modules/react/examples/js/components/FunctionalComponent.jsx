@@ -7,7 +7,7 @@ import styles from "./styles.css";
 
 const props = {};
 
-const SampleComponent = ({...props, props}) => (
+const SampleComponent = ({...props}) => (
   <div className={trimClassNames(["componentClass",
                                   styles.COMPONENT_CLASS_NAME])}>
 

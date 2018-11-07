@@ -13,8 +13,10 @@ class SampleComponent extends React.Component {
   static defaultProps = {};
 
   static propTypes = {
-    reducerNameReducer: PropTypes.object,
-    setNameToComponent: PropTypes.any
+    reducerNameReducer: PropTypes.shape({
+      name: PropTypes.string
+    }),
+    setNameToComponent: PropTypes.func
   };
 
   constructor(props) {
@@ -26,6 +28,7 @@ class SampleComponent extends React.Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     const { setNameToComponent } = this.props;
     const { __name } = this.state;
 
@@ -56,6 +59,7 @@ class SampleComponent extends React.Component {
   }
 
   componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {

@@ -20,6 +20,7 @@ class SampleComponent extends React.Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
   }
 
   componentWillMount() {
@@ -40,6 +41,7 @@ class SampleComponent extends React.Component {
   }
 
   componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {
